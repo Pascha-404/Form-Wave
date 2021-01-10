@@ -14,4 +14,76 @@ body {
     margin: 0;
     overflow: hidden;
     position: relative;
+    background-color: #fdfffc;
+}
+
+.bg{
+    height: 100%;
+    width: 100%;
+position: absolute;
+clip-path: polygon(37% 78%, 63% 78%, 100% 100%, 0% 100%);
+background-color: #f71735;
+}
+
+.container {
+    background-color: rgba(1, 22, 40,0.6);
+    border-radius: 3px;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.formControl {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+
+}
+
+.formControl input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #41ead4;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: inherit;
+}
+
+.formControl label {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+}
+
+.formControl input:focus, .formControl input:valid  {
+    outline: none;
+    background-color: transparent;
+}
+
+button {
+width: 100%;
+padding: 15px;
+background-color: #41ead49a;
+color: inherit;
+border-radius: 6px;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus {
+    outline: none;
+}
+
+.container p a {
+    text-decoration: none;
+    color: #41ead4;
 }
