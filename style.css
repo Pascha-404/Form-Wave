@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --blue-color: #41ead4;
+}
+
 body {
     font-family: 'Libre Franklin', sans-serif;
     height: 100vh;
@@ -17,16 +21,16 @@ body {
     background-color: #fdfffc;
 }
 
-.bg{
+.bg {
     height: 100%;
     width: 100%;
-position: absolute;
-clip-path: polygon(37% 78%, 63% 78%, 100% 100%, 0% 100%);
-background-color: #f71735;
+    position: absolute;
+    clip-path: polygon(37% 78%, 63% 78%, 100% 100%, 0% 100%);
+    background-color: #f71735;
 }
 
 .container {
-    background-color: rgba(1, 22, 40,0.6);
+    background-color: rgba(1, 22, 40, 0.6);
     border-radius: 3px;
     color: #fff;
     padding: 20px 40px;
@@ -47,7 +51,7 @@ h1 {
 .formControl input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #41ead4;
+    border-bottom: 1px solid #fff;
     width: 100%;
     padding: 15px 0;
     font-size: 18px;
@@ -60,19 +64,21 @@ h1 {
     bottom: 15px;
 }
 
-.formControl input:focus, .formControl input:valid  {
+.formControl input:focus,
+.formControl input:valid {
     outline: none;
     background-color: transparent;
+    border-color: var(--blue-color);
 }
 
 button {
-width: 100%;
-padding: 15px;
-background-color: #41ead49a;
-color: inherit;
-border-radius: 6px;
-font-size: 18px;
-margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: #41ead49a;
+    color: inherit;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 button:active {
@@ -85,5 +91,18 @@ button:focus {
 
 .container p a {
     text-decoration: none;
-    color: #41ead4;
+    color: var(--blue-color);
+}
+
+.formControl label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+}
+
+.formControl input:focus+label span,
+.formControl input:valid+label span {
+    transform: translateY(-30px);
+    transition: .3s cubic-bezier(0, 0.55, 0.45, 1);
+    color: var(--blue-color);
 }
